@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Profile Picture Modifier</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      text-align: center;
+      color: #0073b1;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .input-container {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+    input[type="text"], input[type="file"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .file-input {
+      margin-top: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0073b1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #005582;
+    }
+    .status {
+      margin-top: 20px;
+      font-size: 16px;
+      color: green;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .status.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h3>LinkedIn Profile Picture Modifier</h3>
+  <div class="input-container">
+    <label for="image-url">Enter Image URL:</label>
+    <input type="text" id="image-url" placeholder="https://example.com/image.jpg" />
+  </div>
+  <div class="input-container file-input">
+    <label for="image-upload">Upload Image:</label>
+    <input type="file" id="image-upload" accept="image/*" />
+  </div>
+  <button id="change-pictures">Change Profile Pictures</button>
+  <div class="status" id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
